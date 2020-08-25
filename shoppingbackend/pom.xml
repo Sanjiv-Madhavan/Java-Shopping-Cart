@@ -13,6 +13,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<spring.v>5.2.8.RELEASE</spring.v>
 	</properties>
 
 	<dependencies>
@@ -22,6 +23,14 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
+		
+		<!-- Spring -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.v}</version>
+		</dependency>
+		
 	</dependencies>
 
 	<build>
