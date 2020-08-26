@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.proper.shoppingbackend.dao.CategoryDAO;
+import com.proper.shoppingbackend.dto.Category;
 
 @Controller
 public class PageController {
@@ -38,6 +39,33 @@ public class PageController {
 		ModelAndView mv = new ModelAndView("page");
 		mv.addObject("title", "Contact Us");
 		mv.addObject("userClickContact", true);
+		return mv;
+	}
+	
+	@RequestMapping("/show/all/products")
+	public ModelAndView showAllProducts() {
+		ModelAndView mv = new ModelAndView("page");
+		mv.addObject("title", "All Products");
+		
+		mv.addObject("categories", categoryDAO.list());
+		
+		mv.addObject("userClickAllProducts", true);
+		return mv;
+	}
+	
+	@RequestMapping("/show/category/{id}/products")
+	public ModelAndView showCategoryProducts(@PathVariable("id") int id) {
+		
+		Category category = new Category();
+		
+		category = categoryDAO.get(id);
+		
+		ModelAndView mv = new ModelAndView("page");
+		mv.addObject("title", category.getName());
+		
+		mv.addObject("category", category);
+		
+		mv.addObject("userClickCategoryProducts", true);
 		return mv;
 	}
 	

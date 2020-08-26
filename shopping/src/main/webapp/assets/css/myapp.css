@@ -26,6 +26,11 @@ body {
 	min-height: 100%;
 }
 
+.active{
+	color: white;
+	background-color: gray;
+}
+
 .footer-custom{
 	position:relative;
 	bottom:0px;
