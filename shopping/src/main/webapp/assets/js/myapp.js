@@ -1,5 +1,5 @@
 $(function(){
-	window.alert(category);
+
 	
 	switch(menu){
 		case 'About Us':
@@ -11,11 +11,11 @@ $(function(){
 		case 'All Products':
 		$("#listProducts").addClass('active');
 		break;
-		case category.name:
+		/*case category.name:
 		$("#listProducts").addClass('active');
-		break;
+		break;*/
 		default:
-		$("#home").addClass('active');
+		//$("#home").addClass('active');
 		break;
 	}
 	

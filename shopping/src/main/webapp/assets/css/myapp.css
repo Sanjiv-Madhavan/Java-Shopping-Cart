@@ -14,12 +14,14 @@ body {
 
 
 .wrapper-custom{
+/* 	align-items:stretch; */
 	position: relative;
 	min-height: 100%;
+	
 }
 
 .content{
-	height: 100vh;
+	min-height: 100vh;
 }
 
 .container{
@@ -27,13 +29,10 @@ body {
 }
 
 .active{
-	color: white;
+	color: yellow;
 	background-color: gray;
 }
 
 .footer-custom{
 	position:relative;
-	bottom:0px;
-	padding-bottom: 0px;
-	width:100%;
 }

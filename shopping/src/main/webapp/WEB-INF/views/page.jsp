@@ -38,7 +38,7 @@
 
 <body>
 
-	<div class="wrapper-custom">
+	<!-- <div class="wrapper-custom"> -->
 		<!-- Navigation -->
 
 		<div class="content">
@@ -57,24 +57,26 @@
 			<c:if test="${userClickContact}">
 				<%@include file="contact.jsp"%>
 			</c:if>
-			
+
 			<c:if test="${userClickAllProducts or userClickCategoryProducts}">
 				<%@include file="listproducts.jsp"%>
 			</c:if>
-			
+
 
 		</div>
+
+
 		<div class="footer-custom">
 			<!-- Footer -->
 			<%@include file="./shared/footer.jsp"%>
 		</div>
+	<!-- </div> -->
+
+	<!-- Bootstrap core JavaScript -->
+	<script src="${js}/jquery.js"></script>
+	<script src="${js}/bootstrap.bundle.min.js"></script>
 
 
-		<!-- Bootstrap core JavaScript -->
-		<script src="${js}/jquery.js"></script>
-		<script src="${js}/bootstrap.bundle.min.js"></script>
-
-	</div>
 	<!-- self js -->
 	<script src="${js}/myapp.js"></script>
 
