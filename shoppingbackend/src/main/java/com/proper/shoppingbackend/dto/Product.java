@@ -23,6 +23,12 @@ public class Product {
 	public void setId(int id) {
 		this.id = id;
 	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
 	public String getCode() {
 		return code;
 	}
@@ -53,15 +59,12 @@ public class Product {
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
-	
 	public boolean isActive() {
 		return isActive;
 	}
-
 	public void setActive(boolean isActive) {
 		this.isActive = isActive;
 	}
-
 	public int getCategoryId() {
 		return categoryId;
 	}
@@ -86,9 +89,13 @@ public class Product {
 	public void setViews(int views) {
 		this.views = views;
 	}
+
+
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
+	private String name;
 	private String code;
 	private String brand;
 	private String description;

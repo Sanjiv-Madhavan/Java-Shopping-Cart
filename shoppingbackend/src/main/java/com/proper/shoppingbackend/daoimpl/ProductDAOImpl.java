@@ -37,7 +37,7 @@ public class ProductDAOImpl implements ProductDAO {
 	public List<Product> list() {
 		// TODO Auto-generated method stub
 		return sessionFactory.getCurrentSession().
-				createQuery("FROM PRODUCT", Product.class).getResultList();
+				createQuery("FROM Product", Product.class).getResultList();
 	}
 
 	@Override
@@ -86,28 +86,28 @@ public class ProductDAOImpl implements ProductDAO {
 	@Override
 	public List<Product> listActiveProducts() {
 		// TODO Auto-generated method stub
-		String selectActiveProducts = "FROM Product where active = :active";
+		String selectActiveProducts = "FROM Product where isActive = :isActive";
 		return sessionFactory.getCurrentSession().
 				createQuery(selectActiveProducts, Product.class).
-				setParameter("active", true).getResultList();
+				setParameter("isActive", true).getResultList();
 	}
 
 	@Override
 	public List<Product> listActiveProductsByCategory(int categoryId) {
 		// TODO Auto-generated method stub
-		String selectActiveProductsByCategory = "FROM Product where active = :active and category_id = :categoryId";
+		String selectActiveProductsByCategory = "FROM Product where isActive = :isActive AND categoryId = :categoryId";
 		return sessionFactory.getCurrentSession().
 				createQuery(selectActiveProductsByCategory, Product.class).
-				setParameter("active", true).
-				setParameter("category_id", categoryId).getResultList();
+				setParameter("isActive", true).
+				setParameter("categoryId", categoryId).getResultList();
 	}
 
 	@Override
 	public List<Product> latestActiveProducts(int count) {
 		// TODO Auto-generated method stub
 		return sessionFactory.getCurrentSession().
-				createQuery("From product where active = :active order by Id", Product.class).
-				setParameter("active", true).
+				createQuery("FROM Product where isActive = :isActive order by Id", Product.class).
+				setParameter("isActive", true).
 				setFirstResult(0).
 				setMaxResults(count).getResultList();
 	}

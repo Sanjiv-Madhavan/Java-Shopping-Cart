@@ -43,7 +43,7 @@ create table product (
 	views INT DEFAULT 0,
 	constraint pk_product_id PRIMARY KEY (id),
 	constraint fk_product_category_id FOREIGN KEY (category_id) REFERENCES category (id),
-	constraint fk_product_supplier_id FOREIGN KEY (supplier_id) REFERENCES user_detail (id),
+	constraint fk_product_supplier_id FOREIGN KEY (supplier_id) REFERENCES user_id (id),
 );
 
 insert into product (code, name, brand, description, unit_price, quantity, is_active, category_id, supplier_id) 
