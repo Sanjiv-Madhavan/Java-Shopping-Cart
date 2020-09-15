@@ -16,21 +16,41 @@
 						<ol class="breadcrumb">
 
 							<li><a href="${ctxtroot}/home"> Home </a></li>
-							<li class="breadcrumb-item active" aria-current="page"> / All Products</li>
+							<li class="breadcrumb-item active" aria-current="page">/ All
+								Products</li>
 						</ol>
 					</c:if>
-					
+
 					<c:if test="${userClickCategoryProducts == true}">
-					
+
 						<ol class="breadcrumb">
 
 							<li><a href="${ctxtroot}/home"> Home /</a></li>
-							<li class="breadcrumb-item active" aria-current="page"> Category </li>
-							<li class="breadcrumb-item active" aria-current="page"> ${category.name} </li>
+							<li class="breadcrumb-item active" aria-current="page">
+								Category</li>
+							<li class="breadcrumb-item active" aria-current="page">
+								${category.name}</li>
 						</ol>
 					</c:if>
 				</div>
 
+				<div class="col-xs-12">
+
+					<table id="productListTable"
+						class="table table-striped table-borderd">
+
+						<thead>
+
+							<tr>
+								<th>ID</th>
+								<th>NAME</th>
+							</tr>
+
+						</thead>
+
+					</table>
+
+				</div>
 
 			</div>
 
