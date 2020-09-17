@@ -25,11 +25,16 @@
 
 <script>
 	window.menu = '${title}';
+	window.contextroot = '${ctxtroot}'
 </script>
 
 
 <!-- Bootstrap core CSS -->
 <link href="${css}/bootstrap.min.css" rel="stylesheet">
+
+<!-- B -->
+<link href="${css}/dataTables.bootstrap4.css" rel="stylesheet">
+<link href="${css}/icons-font-awesome.css" rel="stylesheet">
 
 <!-- Custom styles for this template -->
 <link href="${css}/myapp.css" rel="stylesheet">
@@ -78,6 +83,7 @@
 	
 	<!-- Datatables BootStrap -->
 	<script src="${js}/jquery.dataTables.js"></script>
+	<script src="${js}/dataTables.bootstrap4.js"></script>
 	
 	<!-- self js -->
 	<script src="${js}/myapp.js"></script>

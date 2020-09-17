@@ -58,3 +58,6 @@ VALUES ('MBLSAMSUNGJ7', 'Samsung J7', 'samsung', 'This is the greatest samsung p
 insert into product (code, name, brand, description, unit_price, quantity, is_active, category_id, supplier_id) 
 VALUES ('LAPHPNBOMEN', 'HP Omen', 'HP', 'This is the greatest HP Laptop of all time', 168000, 5, true, 1, 4);
 
+insert into product (code, name, brand, description, unit_price, quantity, is_active, category_id, supplier_id) 
+VALUES ('TVPANASONICUHD', 'Panasonic UHD TV 65"', 'Panasonic', 'This is the greatest TV of all time', 78000, 12, true, 2, 4);
+

@@ -13,6 +13,12 @@
 
 				<div class="col-lg-12">
 					<c:if test="${userClickAllProducts == true}">
+						
+						<script>
+							window.categoryId = '';
+							/* console.log('All'); */
+						</script>
+						
 						<ol class="breadcrumb">
 
 							<li><a href="${ctxtroot}/home"> Home </a></li>
@@ -22,7 +28,12 @@
 					</c:if>
 
 					<c:if test="${userClickCategoryProducts == true}">
-
+					
+						<script>
+							window.categoryId = '${category.id}';
+							/* console.log('Category'); */
+						</script>
+						
 						<ol class="breadcrumb">
 
 							<li><a href="${ctxtroot}/home"> Home /</a></li>
@@ -42,8 +53,13 @@
 						<thead>
 
 							<tr>
-								<th>ID</th>
+								<th></th>
 								<th>NAME</th>
+								<th>BRAND</th>
+								<th>Price</th>
+								<th>Quantity Available</th>
+								<th></th>
+								<th></th>
 							</tr>
 
 						</thead>
