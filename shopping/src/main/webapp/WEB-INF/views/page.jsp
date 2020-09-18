@@ -7,7 +7,7 @@
 
 <spring:url var="css" value="/resources/css" />
 <spring:url var="js" value="/resources/js" />
-<spring:url var="images" value="/resources/images" />
+<spring:url var="images" value="/resources/Images" />
 
 
 <!DOCTYPE html>
@@ -66,7 +66,10 @@
 			<c:if test="${userClickAllProducts or userClickCategoryProducts}">
 				<%@include file="listproducts.jsp"%>
 			</c:if>
-
+			
+			<c:if test="${userClickShowProduct}">
+				<%@include file="singleProduct.jsp"%>
+			</c:if>
 
 		</div>
 
