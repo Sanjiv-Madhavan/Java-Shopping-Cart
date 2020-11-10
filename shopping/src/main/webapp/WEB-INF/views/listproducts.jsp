@@ -22,7 +22,7 @@
 						<ol class="breadcrumb">
 
 							<li><a href="${ctxtroot}/home"> Home </a></li>
-							<li class="breadcrumb-item active" aria-current="page">/ All
+							<li class="breadcrumb-item" aria-current="page">/ All
 								Products</li>
 						</ol>
 					</c:if>
@@ -37,9 +37,9 @@
 						<ol class="breadcrumb">
 
 							<li><a href="${ctxtroot}/home"> Home /</a></li>
-							<li class="breadcrumb-item active" aria-current="page">
+							<li class="breadcrumb-item" aria-current="page">
 								Category</li>
-							<li class="breadcrumb-item active" aria-current="page">
+							<li class="breadcrumb-item" aria-current="page">
 								${category.name}</li>
 						</ol>
 					</c:if>
