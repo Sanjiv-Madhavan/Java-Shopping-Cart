@@ -70,6 +70,10 @@
 			<c:if test="${userClickShowProduct}">
 				<%@include file="singleProduct.jsp"%>
 			</c:if>
+			
+			<c:if test="${userClickManageProducts}">
+				<%@include file="manageProducts.jsp"%>
+			</c:if>
 
 		</div>
 
