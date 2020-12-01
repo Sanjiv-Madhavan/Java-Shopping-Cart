@@ -6,9 +6,19 @@
 			<div class="card-primary">
 				<div class="card-header">
 					<h4>Product Management</h4>
-				</div>
+					<c:if test="${not empty message }">
+					<div class="col-xs-12">
+					<div class="alert alert-success alert-dismissible">
+					
+					<button type="button" class="close" data-dismiss="alert">
+					&times;
+					</button>
+					${message }
+					</div>
+					</div>
+					</c:if>
 				<div class="card-body">
-					<sf:form class="form-horizontal" modelAttribute="Product">
+					<sf:form action="${ctxtroot }/manage/products" method="POST" class="form-horizontal" modelAttribute="Product">
 
 						<div class="form-group">
 
